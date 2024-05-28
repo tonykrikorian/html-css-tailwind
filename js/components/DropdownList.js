@@ -2,7 +2,7 @@ export default {
   template: `
   
   <label for="cars">{{title}}:</label>
-<select class="w-48 border border-gray-600 rounded-lg  ml-3 mr-3 p-2 " id="cars" name="cars" v-model="selectedValue">
+<select class="w-48 border border-gray-600 rounded-lg  ml-2 mr-3 p-2 " id="cars" name="cars" v-model="selectedValue">
   <option v-for="company in data"  :value="company.value" :id="company.value" >{{company.name}}</option>
   
 </select>
