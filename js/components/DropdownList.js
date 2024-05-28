@@ -2,7 +2,7 @@ export default {
   template: `
   
   <label for="cars">{{title}}:</label>
-<select class="w-48 border border-gray-600 rounded-lg  ml-2 mr-3 p-2 " id="cars" name="cars" v-model="selectedValue">
+<select class="w-48 border border-gray-600 rounded-lg  ml-2 mr-3 p-2 " id="cars" name="cars" v-model="selectedValue"   @change="selectValue" >
   <option v-for="company in data"  :value="company.value" :id="company.value" >{{company.name}}</option>
   
 </select>
@@ -15,5 +15,14 @@ export default {
   props: {
     data: Array,
     title: String,
+    name: String,
+  },
+
+  methods: {
+    selectValue(e) {
+      alert(this.selectedValue);
+
+      this.$emit(String(this.name), this.selectedValue);
+    },
   },
 };

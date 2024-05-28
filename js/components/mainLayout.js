@@ -5,14 +5,14 @@ export default {
   components: { DropdownList },
   template: `
   
-  <div>
-      <DropdownList :data="years" :title="'Año'"></DropdownList>
-      <DropdownList :data="months" :title="'Mes'"></DropdownList>
-      <DropdownList :data="filters.company" :title="'Compañia'"></DropdownList>
-      <DropdownList :data="filters.clusters" :title="'Ramo'"></DropdownList>
-      <DropdownList :data="filters.renewalState" :title="'Estado renovación'"></DropdownList>
-      <DropdownList :data="filters.executive" :title="'Ejecutivo'"></DropdownList>
-      <DropdownList :data="filters.broker" :title="'Corredor'"></DropdownList>
+  <div class="border border-black border-solid p-6 rounded-lg m-8 flex justify-center">
+      <DropdownList :data="years" :title="'Año'" :name="'year'"></DropdownList>
+      <DropdownList :data="months" :title="'Mes'" :name="'month'" ></DropdownList>
+      <DropdownList :data="filters.company" :title="'Compañia'" :name="'company'"></DropdownList>
+      <DropdownList :data="filters.clusters" :title="'Ramo'" :name="'cluster'"></DropdownList>
+      <DropdownList :data="filters.renewalState" :title="'Estado renovación'" :name="'renewalState'"></DropdownList>
+      <DropdownList :data="filters.executive" :title="'Ejecutivo'" :name="'executive'"></DropdownList>
+      <DropdownList :data="filters.broker" :title="'Corredor'" :name="'broker'"></DropdownList>
   </div>
   
   `,
