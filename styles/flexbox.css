@@ -1,0 +1,19 @@
+.flex-container {
+  display: flex;
+  height: 400px;
+  background-color: dodgerblue;
+  flex-direction: row; /*Especifica si los elementos se aplilan en filas o columnas*/
+  justify-content: center; /*Alinea los elementos en el eje X*/
+  align-items: center; /*Alinea los elementos del container en el eje Y*/
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  border: 1px solid gray;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
